@@ -9,8 +9,8 @@ namespace matrix
         private T[,] array;
 		
         public Matrix(int x, int y){
-            array = new T[x,y];
-            SizeX = x; SizeY = y; Size = x*y;
+		array = new T[x,y];
+		SizeX = x; SizeY = y; Size = x*y;
         }
 		
 	public void clear(){
@@ -18,15 +18,15 @@ namespace matrix
 	}
 		
         public void setElement(int x, int y, T e){
-            if(x < SizeX && y < SizeY){
-                array[x,y] = e;
-            }
+		if(x < SizeX && y < SizeY){
+			array[x,y] = e;
+		}
         }
 		
 	public void setElement((int X, int Y) pos, T e){
-            if(pos.X < SizeX && pos.Y < SizeY){
-                array[pos.X,pos.Y] = e;
-            }
+		if(pos.X < SizeX && pos.Y < SizeY){
+			array[pos.X,pos.Y] = e;
+		}
         }
 		
 	public void addToEnd(T e){
@@ -41,17 +41,17 @@ namespace matrix
 	}
 		
         public T getElement(int x, int y){
-            if(x < SizeX && y < SizeY){
-                return array[x,y];
-            }
-            return default(T);
+		if(x < SizeX && y < SizeY){
+			return array[x,y];
+		}
+		return default(T);
         }
 		
 	public T getElement((int X, int Y) t){
-            if(t.Item1 < SizeX && t.Item2 < SizeY){
-                return array[t.X,t.Y];
-            }
-            return default(T);
+		if(t.Item1 < SizeX && t.Item2 < SizeY){
+			return array[t.X,t.Y];
+		}
+		return default(T);
         }
 		
 	public (int X, int Y) getPosByNumber(int number){
@@ -61,10 +61,10 @@ namespace matrix
 	}
 		
         public int getElementNumber(int x, int y){
-            if(x < SizeX && y < SizeY){
-                return y * (SizeX - 1) + x + 1;
-            }
-            return -1;
+		if(x < SizeX && y < SizeY){
+			return y * (SizeX - 1) + x + 1;
+		}
+		return -1;
         }
 		
 	public void removeElement(int x, int y){
