@@ -124,6 +124,13 @@ namespace matrix
 		}
 		return result;
 	}
+	
+	public int getElementCount(){
+		int result = 0;
+		Action<T> act = (T t) => result++;
+		forEach(act);
+		return result;
+	}
 		
 	public bool exists(Predicate<T> predicate){
 		for(int x = 0; x < SizeX; x++){
