@@ -127,7 +127,9 @@ namespace matrix
 	
 	public int getElementCount(){
 		int result = 0;
-		Action<T> act = (T t) => result++;
+		Action<T> act = delegate(T t){
+			if(t != default(T)) result++;
+		};
 		forEach(act);
 		return result;
 	}
