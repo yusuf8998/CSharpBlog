@@ -48,7 +48,7 @@ namespace matrix
         }
 		
 	public T getElement((int X, int Y) t){
-		if(t.Item1 < SizeX && t.Item2 < SizeY){
+		if(t.X < SizeX && t.Y < SizeY){
 			return array[t.X,t.Y];
 		}
 		return default(T);
